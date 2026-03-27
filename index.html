@@ -3,103 +3,234 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brisbane Peter B. Tarongoy III | Virtual Assistant & Data Analyst</title>
+<title>BPT III | Data Intelligence System</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 <style>
-body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f5f7fb;color:#333}
-header{background:#1f2937;color:white;padding:40px 20px;text-align:center}
-h1{margin:0;font-size:32px}
-h2{color:#1f2937}
-section{max-width:1000px;margin:auto;padding:40px 20px}
-.card{background:white;padding:25px;border-radius:10px;margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
-.skills span{display:inline-block;background:#e5e7eb;padding:8px 12px;margin:5px;border-radius:6px;font-size:14px}
-footer{text-align:center;padding:20px;background:#111827;color:white}
-.button{display:inline-block;background:#2563eb;color:white;padding:12px 20px;border-radius:6px;text-decoration:none;margin-top:10px}
+:root {
+    --neon-blue:#4facfe;
+    --neon-cyan:#00f2fe;
+    --neon-green:#43e97b;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#050507;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+    linear-gradient(rgba(79,172,254,0.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(79,172,254,0.08) 1px,transparent 1px);
+    background-size:40px 40px;
+    animation:grid 20s linear infinite;
+    z-index:-2;
+}
+@keyframes grid{to{transform:translateY(40px)}}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:600px;height:600px;
+    background:radial-gradient(circle,rgba(79,172,254,.3),transparent 70%);
+    top:20%;left:50%;
+    transform:translateX(-50%);
+    filter:blur(100px);
+    z-index:-1;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    padding:15px 40px;
+    backdrop-filter:blur(20px);
+    background:rgba(0,0,0,.6);
+    display:flex;
+    justify-content:space-between;
+    z-index:1000;
+}
+nav a{color:#aaa;text-decoration:none;margin-left:20px}
+nav a:hover{color:#fff}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:clamp(3rem,8vw,6rem);
+    background:linear-gradient(90deg,var(--neon-blue),var(--neon-cyan));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{color:#aaa;max-width:700px;margin:20px 0}
+
+.badge{
+    border:1px solid rgba(79,172,254,.3);
+    padding:8px 16px;
+    border-radius:50px;
+    margin-bottom:20px;
+    font-size:.8rem;
+}
+
+.dot{
+    width:8px;height:8px;
+    background:var(--neon-green);
+    display:inline-block;
+    border-radius:50%;
+    margin-right:8px;
+}
+
+.btn{
+    padding:12px 30px;
+    border-radius:30px;
+    border:none;
+    cursor:pointer;
+    background:linear-gradient(90deg,var(--neon-blue),var(--neon-cyan));
+    color:#fff;
+}
+
+section{padding:100px 20px;max-width:1100px;margin:auto}
+
+h2{text-align:center;font-size:2.5rem;margin-bottom:40px}
+
+.card{
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(79,172,254,.2);
+    padding:25px;
+    border-radius:20px;
+}
+
+.grid{display:grid;gap:20px}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+
+footer{text-align:center;padding:40px;color:#777}
+
+.fade{opacity:0;transform:translateY(30px);transition:1s}
+.fade.show{opacity:1;transform:translateY(0)}
 </style>
 </head>
+
 <body>
 
-<header>
-<h1>Brisbane Peter B. Tarongoy III</h1>
-<p>Virtual Assistant | Excel Data Analyst | Administrative Support</p>
-<a class="button" href="mailto:peterbreva@gmail.com">Hire Me</a>
-</header>
+<nav>
+<div>BPT III</div>
+<div>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-<section>
-<div class="card">
+<div class="hero">
+<div class="badge"><span class="dot"></span> AVAILABLE FOR REMOTE WORK</div>
+
+<h1>Brisbane Peter III B. Tarongoy</h1>
+
+<p>
+Data Analyst • Excel Automation Specialist • Virtual Assistant • IT Support Technician
+</p>
+
+<button class="btn" onclick="scrollToSection('contact')">Hire Me</button>
+</div>
+
+<section id="about" class="fade">
 <h2>About Me</h2>
+<div class="card">
 <p>
-I am a Computer Engineering graduate with professional experience in data analysis, property and cost control, IT support, and administrative operations. I specialize in transforming complex data into clear and actionable insights using advanced Microsoft Excel techniques.
+Bachelor of Science in Computer Engineering graduate with strong experience in data analysis, IT support, and business operations. I specialize in transforming complex datasets into actionable insights, building automated systems, and improving operational efficiency. 
+<br><br>
+I have worked as a Cost and Property Controller, Data Analyst, and IT Technician, giving me a strong foundation in both technical and business environments. I am currently seeking remote opportunities where I can contribute through data-driven decision making and automation.
 </p>
-<p>
-I help businesses improve efficiency by organizing data, automating spreadsheets, generating reports, and providing administrative support that allows business owners to focus on growth.
-</p>
+</div>
+</section>
+
+<section id="experience" class="fade">
+<h2>Experience</h2>
+<div class="grid grid-3">
+
+<div class="card">
+<strong>Cost & Property Controller</strong><br>
+Two Seasons Coron Bayside Hotel<br><br>
+• Managed property assets and budgets
+• Created financial and inventory reports
+• Improved tracking systems for operational efficiency
 </div>
 
 <div class="card">
-<h2>Core Skills</h2>
-<div class="skills">
-<span>Microsoft Excel Advanced</span>
-<span>Data Analysis</span>
-<span>Data Entry & Data Management</span>
-<span>Report Generation</span>
-<span>Spreadsheet Automation</span>
-<span>Administrative Support</span>
-<span>IT Troubleshooting</span>
-<span>Data Visualization</span>
-</div>
+<strong>Data Analyst</strong><br>
+Storeminder Philippines Inc.<br><br>
+• Analyzed large datasets for business insights
+• Built reports and dashboards
+• Identified trends and performance gaps
 </div>
 
 <div class="card">
-<h2>Professional Experience</h2>
-
-<h3>Cost and Property Controller</h3>
-<p>Two Seasons Coron Bayside Hotel</p>
-<ul>
-<li>Managed property and operational asset records</li>
-<li>Analyzed financial and operational reports</li>
-<li>Maintained inventory and asset tracking systems</li>
-</ul>
-
-<h3>Data Analyst</h3>
-<p>Storeminder Philippines Inc.</p>
-<ul>
-<li>Analyzed datasets to identify trends and insights</li>
-<li>Prepared analytical reports for management</li>
-<li>Maintained data accuracy across operational systems</li>
-</ul>
-
-<h3>IT Technician</h3>
-<p>Shintoshin Consulting</p>
-<ul>
-<li>Troubleshot hardware and software issues</li>
-<li>Maintained computer systems and networks</li>
-<li>Provided technical support to staff</li>
-</ul>
+<strong>IT Technician</strong><br>
+Shintoshin Consulting<br><br>
+• Hardware and software troubleshooting
+• System maintenance and network support
+• Technical support for daily operations
 </div>
 
-<div class="card">
-<h2>Services I Offer</h2>
-<ul>
-<li>Excel Data Analysis & Dashboard Creation</li>
-<li>Data Entry & Data Cleanup</li>
-<li>Administrative Virtual Assistant Tasks</li>
-<li>Spreadsheet Automation</li>
-<li>Business Reports & Insights</li>
-</ul>
 </div>
+</section>
 
-<div class="card">
+<section id="skills" class="fade">
+<h2>Skills</h2>
+<div class="grid grid-3">
+<div class="card">Advanced Excel (Pivot Tables, Macros, Automation)</div>
+<div class="card">Data Analysis & Reporting</div>
+<div class="card">Google Sheets Automation</div>
+<div class="card">Virtual Assistance</div>
+<div class="card">Customer Support Systems</div>
+<div class="card">IT Support & Troubleshooting</div>
+<div class="card">Data Visualization</div>
+<div class="card">Workflow Automation</div>
+<div class="card">Basic Programming & Systems Thinking</div>
+</div>
+</section>
+
+<section id="contact" class="fade">
 <h2>Contact</h2>
-<p>Email: peterbreva@gmail.com</p>
-<p>Alternative Emails: petertarongoy@gmail.com | brisbanepeter727@gmail.com</p>
-<p>Phone: +63 953 058 1002</p>
-<p>Location: Coron, Palawan, Philippines</p>
+<div class="grid grid-3">
+<div class="card">Email: peterbreva@gmail.com</div>
+<div class="card">Phone: +63 953 058 1002</div>
+<div class="card">LinkedIn: linkedin.com/in/brisbanepetertarongoyiii</div>
 </div>
 </section>
 
 <footer>
-<p>© 2026 Brisbane Peter B. Tarongoy III</p>
+© 2026 Brisbane Peter B. Tarongoy III • Professional Portfolio
 </footer>
+
+<script>
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){e.target.classList.add("show")}
+})
+});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>
